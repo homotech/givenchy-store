@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: montserrat;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./Assets/Montserrat-Regular.woff");
+}
+
+body {
+  max-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parent-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (684px)[2];
+      grid-template-columns: repeat(2, 684px);
+}
+
+.parent-container .container-left {
+  padding: 0px 142px;
+}
+
+.parent-container .container-left .logo-and-caa {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.parent-container .container-left .logo-and-caa img {
+  padding-top: 20px;
+  width: 18%;
+  padding-bottom: 10px;
+}
+
+.parent-container .container-left .logo-and-caa p {
+  font-size: 14px;
+}
+
+.parent-container .container-left .btn-container {
+  padding-bottom: 20px;
+}
+
+.parent-container .container-left .btn-container button {
+  border: none;
+  background-color: #336ebb;
+  height: 48px;
+  width: 400px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.parent-container .container-left .btn-container button i {
+  padding-right: 10px;
+}
+
+.parent-container .container-left .btn-container button:hover {
+  background-color: #123a6b;
+}
+
+.parent-container .container-left .btn-container button i {
+  font-size: 20px;
+}
+
+.parent-container .container-left .btn-container button span {
+  font-size: 14px;
+}
+
+.parent-container .container-left .btn-container button:focus {
+  outline: none;
+}
+
+.parent-container .container-left .or-block {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.parent-container .container-left .input input {
+  width: 400px;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 4px solid #363636;
+  padding: 15px 10px;
+  margin-bottom: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.parent-container .container-left .input input:focus {
+  outline: none;
+  border-bottom: 4px solid #336ebb;
+}
+
+.parent-container .container-left .get-started {
+  padding-top: 30px;
+}
+
+.parent-container .container-left .get-started button {
+  border: none;
+  background-color: #000;
+  height: 48px;
+  width: 400px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.parent-container .container-left .get-started button i {
+  font-size: 20px;
+}
+
+.parent-container .container-left .get-started button span {
+  font-size: 14px;
+}
+
+.parent-container .container-left .get-started button:focus {
+  outline: none;
+}
+
+.parent-container .container-left .get-started button:hover {
+  background-color: #363636;
+}
+
+.parent-container .container-left .have-an-account {
+  text-align: center;
+  padding-top: 112px;
+}
+
+.parent-container .container-left .have-an-account p {
+  color: #000;
+}
+
+.parent-container .container-left .have-an-account p a {
+  text-decoration: none;
+  color: #336ebb;
+}
+
+.parent-container .container-left .have-an-account p a:hover {
+  color: #123a6b;
+}
+
+.parent-container .container-right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.parent-container .container-right .text-over {
+  position: absolute;
+  display: block;
+  width: 100%;
+  z-index: 3;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.parent-container .container-right .text-over img {
+  width: 30%;
+}
+
+.parent-container .container-right .text-over p {
+  margin: 0 auto;
+  width: 50%;
+  color: white;
+}
+
+.parent-container .container-right .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#000));
+  background-image: linear-gradient(to top, #000 rgba(0, 0, 0, 0.4));
+}
+/*# sourceMappingURL=styles.css.map */

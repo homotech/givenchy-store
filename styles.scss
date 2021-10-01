@@ -1,0 +1,162 @@
+//VARIABLES - colors
+$darkblue: #123a6b;
+$white: #fff;
+$lightblue: #336ebb;
+$lightblack: #363636;
+$black: #000;
+$inputandbuttonwidth: 400px;
+$inputheight: 40px;
+$signupandgetstartedbuttonwidth: 65px;
+$paddingleftandright: 15px;
+$paddingtopandbottom: 10px;
+$inputmarginbottom: 25px;
+$inputtext: 14px;
+
+//Resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: montserrat;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("./Assets/Montserrat-Regular.woff");
+}
+@mixin inputs {
+  border-bottom: 4px solid $lightblack;
+}
+@mixin buttonreset($bgcolor) {
+  border: none;
+  background-color: $bgcolor;
+  height: 48px;
+  width: $inputandbuttonwidth;
+  color: $white;
+  font-size: $inputtext;
+  cursor: pointer;
+  border-radius: 5px;
+  i {
+    font-size: 20px;
+  }
+  span {
+    font-size: 14px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+body {
+  max-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parent-container {
+  display: grid;
+  grid-template-columns: repeat(2, 684px);
+  .container-left {
+    padding: 0px 142px;
+    .logo-and-caa {
+      text-align: center;
+      padding-bottom: 20px;
+      img {
+        padding-top: 20px;
+        width: 18%;
+        // height: 135px;
+        padding-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    .btn-container {
+      padding-bottom: 20px;
+      button {
+        i {
+          padding-right: 10px;
+        }
+        &:hover {
+          background-color: $darkblue;
+        }
+        @include buttonreset($lightblue);
+      }
+    }
+    .or-block {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .input {
+      input {
+        width: $inputandbuttonwidth;
+        height: $inputheight;
+        font-size: $inputtext;
+        border: none;
+        border-bottom: 4px solid $lightblack;
+        padding: $paddingleftandright $paddingtopandbottom;
+        margin-bottom: $inputmarginbottom;
+        transition: 0.3s;
+        &:focus {
+          outline: none;
+          border-bottom: 4px solid $lightblue;
+        }
+      }
+    }
+    .get-started {
+      padding-top: 30px;
+      button {
+        @include buttonreset($black);
+        &:hover {
+          background-color: $lightblack;
+        }
+      }
+    }
+    .have-an-account {
+      text-align: center;
+      padding-top: 112px;
+      p {
+        color: $black;
+        a {
+          text-decoration: none;
+          color: $lightblue;
+          &:hover {
+            color: $darkblue;
+          }
+        }
+      }
+    }
+  }
+  .container-right {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .text-over {
+      position: absolute;
+      display: block;
+      width: 100%;
+      z-index: 3;
+      margin-top: 100px;
+      text-align: center;
+      img {
+        width: 30%;
+      }
+      p {
+        margin: 0 auto;
+        width: 50%;
+        color: white;
+      }
+    }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to top,
+        $black rgba($color: $black, $alpha: 0.4)
+      );
+      // background-color: rgba($color: $black, $alpha: 0.8);
+    }
+  }
+}
